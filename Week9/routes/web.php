@@ -14,5 +14,35 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Welcome');
 });
+
+Route::get('/aboutUs', function () {
+    return view('layout.aboutUs');
+});
+Route::get('/app', function () {
+    return view('layout.app');
+});
+Route::get('/team', function () {
+    return view('layout.team');
+});
+Route::get('/testimonials', function () {
+    return view('layout.testimonials');
+});
+Route::get('/services', function () {
+    return view('layout.services');
+});
+Route::get('/portfolio', function () {
+    return view('layout.portfolio');
+});
+Route::get('/pricing', function () {
+    return view('layout.pricing');
+});
+Route::get('/blog', function () {
+    return view('layout.blog');
+});
+Route::get('/blog-single', function () {
+    return view('layout.blog-single');
+});
+
+
