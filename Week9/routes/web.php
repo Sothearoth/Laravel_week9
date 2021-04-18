@@ -12,37 +12,25 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\PageController;
+Route::get('/',[PageController::class,"welcome"]);
+   
 
-Route::get('/', function () {
-    return view('Welcome');
-});
 
-Route::get('/aboutUs', function () {
-    return view('layout.aboutUs');
-});
+Route::get('/aboutUs',[PageController::class,"aboutUs"] );
+
 Route::get('/app', function () {
     return view('layout.app');
 });
-Route::get('/team', function () {
-    return view('layout.team');
-});
-Route::get('/testimonials', function () {
-    return view('layout.testimonials');
-});
-Route::get('/services', function () {
-    return view('layout.services');
-});
-Route::get('/portfolio', function () {
-    return view('layout.portfolio');
-});
-Route::get('/pricing', function () {
-    return view('layout.pricing');
-});
-Route::get('/blog', function () {
-    return view('layout.blog');
-});
-Route::get('/blog-single', function () {
-    return view('layout.blog-single');
-});
+Route::get('/team',[PageController::class,"team"]);
+
+Route::get('/testimonials',[PageController::class,"testimonials"]);
+Route::get('/services',[PageController::class,"services"]); 
+Route::get('/portfolio',[PageController::class,"portfolio"]); 
+Route::get('/pricing',[PageController::class,"pricing"]); 
+Route::get('/blog', [PageController::class,"blog"]); 
+Route::get('/blog-single',[PageController::class,"blog_single"]); 
+
+Route::get('/contact',[PageController::class,"contact"]); 
 
 
